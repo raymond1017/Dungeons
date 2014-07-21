@@ -47,7 +47,7 @@
 }
 
 -(NSString*) translateByKey:(NSString*)key {
-    return [self.LANG_BUNDLE localizedStringForKey:key value:@"Undefine Lang" table:@"Horde"];
+    return [self.LANG_BUNDLE localizedStringForKey:key value:@"Undefine Lang" table:@"Dungeons"];
 }
 
 -(void) changeLanguage:(enum LANGUAGE_TYPE)type {
