@@ -14,4 +14,5 @@
                             andChannelID:(NSString*)cid
                             andVersionID:(NSString*)vid;
 
+-(void) build_business_requestWithPackage:(NSMutableDictionary*) businessData;
 @end

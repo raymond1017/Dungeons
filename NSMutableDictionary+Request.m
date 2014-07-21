@@ -20,4 +20,8 @@
     
     [self setObject:dict forKey:@"c"];
 }
+
+-(void) build_business_requestWithPackage:(NSMutableDictionary*) businessData {
+    [self setObject:businessData forKey:@"b"];
+}
 @end
