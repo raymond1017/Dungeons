@@ -8,6 +8,7 @@
 
 #import "SoloVC.h"
 #import "Orgrimar.h"
+#import "UIHelper.h"
 #import "NSBundle+Language.h"
 
 #define STATUSBAR_HEIGHT 20

@@ -10,10 +10,4 @@
 
 @implementation UIView(Util)
 
--(void) drawBorderOn:(int)borderEnum
-      andBorderWidth:(int)width
-         borderColor:(UIColor*) color {
-    
-    
-}
 @end
