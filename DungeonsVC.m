@@ -60,8 +60,6 @@
     
     [[Orgrimar instance] addObserver:self forKeyPath:@"LANG_BUNDLE" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
     
-    
-    
     // 导航控件
     {
         UILabel* label = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -86,10 +84,15 @@
     
     // 回退
     {
-        UIButton* btnBack = [[UIButton alloc] initWithFrame:CGRectMake(5, 0, 44, 44)];
+        UIButton* btnBack = [[UIButton alloc] initWithFrame:CGRectMake(12, 0, 60, 44)];
         UIImage* back = [UIImage imageNamed:@"minback.png"];
         [btnBack addTarget:self action:@selector(onBackTouched:) forControlEvents:UIControlEventTouchUpInside];
         [btnBack setImage:back forState:UIControlStateNormal];
+        [btnBack setTitle:T_(@"Common_Back") forState:UIControlStateNormal];
+        [btnBack setImageEdgeInsets:UIEdgeInsetsMake(0.0,
+                                                  0.0,
+                                                  0.0,
+                                                  10.0)];
         [btnBack setHidden:YES];
         [[self container_bar] addSubview:btnBack];
         
