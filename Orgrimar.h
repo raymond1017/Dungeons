@@ -32,8 +32,6 @@ enum LANGUAGE_TYPE {
 -(void) initialization;
 -(void) changeHost:(enum HOST_TYPE)type;
 -(void) changeLanguage:(enum LANGUAGE_TYPE)type;
-+(NSString*) translateByBundle:(NSBundle*)bundle
-                        andKey:(NSString*)key;
 -(NSString*) translateByKey:(NSString*)key;
 @end
 
