@@ -8,7 +8,7 @@
 
 #import "Orgrimar.h"
 
-#define DEV_HOST @"http://l-lvtu8.lvtu.dev.cn6.qunar.com:7213"
+#define DEV_HOST @"http://182.92.69.151:8080"
 
 
 @implementation Orgrimar
