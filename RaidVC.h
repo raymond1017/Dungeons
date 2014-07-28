@@ -1,12 +1,12 @@
 //
-//  DungeonsVC.h
+//  RaidVC.h
 //  Horde
 //
-//  Created by junwen.wu on 14-7-17.
+//  Created by junwen.wu on 14-7-28.
 //  Copyright (c) 2014年 Bwl. All rights reserved.
 //
 
-#import "SoloVC.h"
+#import <UIKit/UIKit.h>
 #import "Orgrimar.h"
 #import "UIHelper.h"
 #import "NSBundle+Language.h"
@@ -15,7 +15,7 @@
 #define STATUSBAR_HEIGHT 20
 #define NAVIGATIONBAR_HEIGHT 40
 
-@interface DungeonsVC : SoloVC
+@interface RaidVC : UINavigationController
 
 @property (assign, nonatomic) CGFloat tabBarHeight;
 
@@ -26,7 +26,7 @@
 @property (strong, nonatomic) UILabel* nav_title;
 
 -(void) navigationWithTitle:(NSString*) title
-      isHiddenBack:(BOOL) hiddenBack;
+               isHiddenBack:(BOOL) hiddenBack;
 
 -(void) handleLanguageChanged:(NSBundle*) bundle;
 
