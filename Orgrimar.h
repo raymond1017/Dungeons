@@ -16,8 +16,9 @@ enum HOST_TYPE{
 };
 
 enum LANGUAGE_TYPE {
-    LANGUAGE_zhCN,
-    LANGUAGE_enUS
+    LANGUAGE_zhCN = 1,
+    LANGUAGE_enUS,
+    LANGUAGE_thTH,
 };
 
 @interface Orgrimar : NSObject

@@ -32,7 +32,16 @@
     
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
     NSNumber *defLang = [def valueForKey:@"userLanguage"];
-    
+    if([defLang intValue] == 0){
+        defLang = [NSNumber numberWithInt:LANGUAGE_thTH];
+    }
+    NSArray* languages = [def objectForKey:@"AppleLanguages"];
+    NSString *current = [languages objectAtIndex:0];
+    if([current isEqualToString:@"en"] || [current isEqualToString:@"zh-Hans"]){
+        defLang = [NSNumber numberWithInt:1];
+    }else{
+        defLang = [NSNumber numberWithInt:3];
+    }
     //取一个默认的
 //    if([string length] < 1){
         //          根据系统切换的逻辑
@@ -62,6 +71,11 @@
         case LANGUAGE_enUS:
         {
             lang = @"en";
+            break;
+        }
+        case LANGUAGE_thTH:
+        {
+            lang = @"th";
             break;
         }
         default:

@@ -10,6 +10,7 @@
 #import "Orgrimar.h"
 #import "UIHelper.h"
 #import "NSBundle+Language.h"
+#import "UIView+Util.h"
 
 #define STATUSBAR_HEIGHT 20
 #define NAVIGATIONBAR_HEIGHT 40
@@ -29,6 +30,4 @@
 
 -(void) handleLanguageChanged:(NSBundle*) bundle;
 
-#define IMAGEVIEW_SCALE(x) [[UIImageView alloc] initWithImage:IMAGE_SCALE(x)]
-#define IMAGE_SCALE(x) [UIImage imageWithData:[[NSData alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:x ofType:@"png"]] scale:2.0]
 @end
