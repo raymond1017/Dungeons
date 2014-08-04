@@ -100,6 +100,7 @@
     }
     [self.view bringSubviewToFront:self.container_bar];
     
+    
 //    [[Orgrimar instance] willChangeValueForKey:@"LANG_BUNDLE"];
 //    [[Orgrimar instance] didChangeValueForKey:@"LANG_BUNDLE"];
 }
