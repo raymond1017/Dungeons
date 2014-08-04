@@ -1,18 +1,18 @@
 //
-//  DungeonsVC.m
+//  RaidVC.m
 //  Horde
 //
-//  Created by junwen.wu on 14-7-17.
+//  Created by junwen.wu on 14-7-28.
 //  Copyright (c) 2014年 Bwl. All rights reserved.
 //
 
-#import "DungeonsVC.h"
+#import "RaidVC.h"
 
-@interface DungeonsVC ()
+@interface RaidVC ()
 
 @end
 
-@implementation DungeonsVC
+@implementation RaidVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,12 +28,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self setNavigationBarHidden:YES];
+    
     CGFloat barHeight = self.tabBarHeight;
     self.view.contentMode = UIViewContentModeScaleAspectFill;
     
-//    UIImage* image = [UIImage imageNamed:@"app_bg.png"];
+    //    UIImage* image = [UIImage imageNamed:@"app_bg.png"];
     UIImageView* background = [[UIImageView alloc] initWithFrame:self.view.frame];
-//    [background setImage:image];
+    //    [background setImage:image];
     [self.view addSubview:background];
     self.view.backgroundColor = [UIColor colorWithRed:234.0/255.0 green:72.0/255.0 blue:41.0/255.0 alpha:1];
     
@@ -90,9 +92,9 @@
         [btnBack setImage:back forState:UIControlStateNormal];
         [btnBack setTitle:T_(@"Common_Back") forState:UIControlStateNormal];
         [btnBack setImageEdgeInsets:UIEdgeInsetsMake(0.0,
-                                                  0.0,
-                                                  0.0,
-                                                  10.0)];
+                                                     0.0,
+                                                     0.0,
+                                                     10.0)];
         [btnBack setHidden:YES];
         [[self container_bar] addSubview:btnBack];
         
@@ -100,9 +102,8 @@
     }
     [self.view bringSubviewToFront:self.container_bar];
     
-    
-//    [[Orgrimar instance] willChangeValueForKey:@"LANG_BUNDLE"];
-//    [[Orgrimar instance] didChangeValueForKey:@"LANG_BUNDLE"];
+    //    [[Orgrimar instance] willChangeValueForKey:@"LANG_BUNDLE"];
+    //    [[Orgrimar instance] didChangeValueForKey:@"LANG_BUNDLE"];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -121,15 +122,15 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 -(void) onBackTouched:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -160,5 +161,24 @@
 
 -(void) handleLanguageChanged:(NSBundle*) bundle {
     
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation != UIInterfaceOrientationMaskPortrait);
+}
+
+-(NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+-(BOOL)shouldAutorotate
+{
+    return YES;
 }
 @end
